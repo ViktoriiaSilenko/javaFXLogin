@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.katador.controllers.LoginController">
+<children>
+
+    <BorderPane prefHeight="200.0" prefWidth="400.0" style="-fx-background-color: #E6E6E6;">
+        <center>
+            <VBox prefHeight="200.0" prefWidth="400.0" BorderPane.alignment="CENTER" >
+                <children>
+                    <Label text="USERNAME" />
+                    <TextField fx:id="txtUserName" onKeyPressed="#onEnter" text="client"/>
+                    <Label text="PASSWORD">
+                        <VBox.margin>
+                            <Insets top="10.0"/>
+                        </VBox.margin>
+                    </Label>
+                    <PasswordField fx:id="txtPassword" onKeyPressed="#onEnter" text="123456"/>
+                    <BorderPane prefHeight="120.0" prefWidth="400.0">
+                        <center>
+                            <VBox>
+                                <children>
+                                    <Region prefHeight="20" />
+                                    <HBox>
+                                        <Hyperlink text="FORGOT USERNAME/PASSWORD?" prefWidth="180.0" onAction="#doshowforgot" wrapText="true" BorderPane.alignment="CENTER_LEFT" >
+                                        </Hyperlink>
+                                        <Button fx:id="btnLogin" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#login" prefHeight="22.0" prefWidth="180.0" text="CONTINUE" BorderPane.alignment="CENTER_RIGHT" styleClass="orange">
+                                        </Button>
+                                    </HBox>
+                                </children>
+                            </VBox>
+                        </center>
+                        <bottom>
+                            <Label fx:id="errorLabel" text="Label" textFill="red" visible="false" BorderPane.alignment="CENTER" />
+                        </bottom>
+                    </BorderPane>
+                </children>
+                <BorderPane.margin>
+                    <Insets left="25.0" right="25.0" top="25.0" bottom="5.0"/>
+                </BorderPane.margin>
+            </VBox>
+        </center>
+        <BorderPane.margin>
+            <Insets left="25.0" right="25.0" top="25.0" bottom="5.0"/>
+        </BorderPane.margin>
+    </BorderPane>
+</children>
+<columnConstraints>
+    <ColumnConstraints />
+</columnConstraints>
+<rowConstraints>
+    <RowConstraints />
+</rowConstraints>
+
+</GridPane>
